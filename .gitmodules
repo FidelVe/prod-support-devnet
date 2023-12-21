@@ -1,0 +1,9 @@
+[submodule "archway"]
+	path = archway
+	url = https://github.com/archway-network/archway/
+[submodule "gochain-local"]
+	path = gochain-local
+	url = https://github.com/icon-project/gochain-local
+[submodule "gochain-local-decentralize"]
+	path = gochain-local-decentralize
+	url = https://github.com/icon-community/gochain-local-decentralize

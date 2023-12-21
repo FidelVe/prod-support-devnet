@@ -7,3 +7,6 @@
 [submodule "gochain-local-decentralize"]
 	path = gochain-local-decentralize
 	url = https://github.com/icon-community/gochain-local-decentralize
+[submodule "goloop"]
+	path = goloop
+	url = git@github.com:icon-project/goloop.git

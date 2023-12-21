@@ -22,9 +22,3 @@ stop:
 	@cd ./gochain-local && docker compose -f compose-multi.yml down
 	@echo "> Stop archway Nodes.."
 	@cd ./archway/ && docker compose down
-
-force: ; # Empty recipe for dummy dependency
-
-test:
-	@ls
-	@cd archway && ls

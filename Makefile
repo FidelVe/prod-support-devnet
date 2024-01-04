@@ -1,10 +1,15 @@
+SHELL:=/usr/bin/env sh
+UNAME := $(shell uname -m)
 .PHONY: start
 
 setup:
 	@echo "> Make ICON nodes container.."
-	# @cd ./goloop/ && make gochain-icon-image
+	@cd ./goloop/ && make gochain-icon-image
 	@echo "> Setup archway node.."
 	@cd ./archway/ && make install
+	@echo "> Setup BSC node.."
+	# @cd ./bsc-docker && docker compose -f docker-compose.bsc.yml build && docker compose -f docker-compose.simple.bootstrap.yml build && docker compose -f docker-compose.simple.yml build --build-arg OS_ARCH=${UNAME}
+	# @cd ./bsc-docker && docker compose -f docker-compose.simple.bootstrap.yml run bootstrap-simple
 
 start:
 	@echo "Checking archway git tags.."
@@ -16,9 +21,14 @@ start:
 	@cd ./gochain-local && docker compose -f compose-multi.yml up -d
 	@echo "> Decentralize ICON nodes.."
 	@cd ./gochain-local-decentralize && npm install && npm run start
+	@echo "> Run BSC Nodes.."
+	# @cd ./bsc-docker && docker compose -f docker-compose.simple.bootstrap.yml run bootstrap-simple
+	# @cd ./bsc-docker && docker compose -f docker-compose.simple.yml up -d bsc-rpc bsc-validator1 netstats
 
 stop:
 	@echo "> Stop ICON Nodes.."
 	@cd ./gochain-local && docker compose -f compose-multi.yml down
 	@echo "> Stop archway Nodes.."
 	@cd ./archway/ && docker compose down
+	@echo "> Stop BSC Nodes.."
+	@cd ./bsc-docker && docker compose -f docker-compose.simple.yml down

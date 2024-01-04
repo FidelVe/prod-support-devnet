@@ -12,9 +12,11 @@ Make sure you have the following installed in your server before running the Mak
 
 For setting up the devnet on a new server follow this instructions:
 
-* Clone the repo
-* Run `make setup`
-* Run `make start`
+* Clone the repo by running `git clone --recurse-submodules https://github.com/FidelVe/prod-support-devnet.git`
+* Setup devnet by running `make setup`
+* Start devnet by running `make start`
+
+To stop the devnet run the command `make stop`
 
 ## Instructions for using nginx as a reverse proxy
 TODO

@@ -9,10 +9,10 @@
 	url = https://github.com/icon-community/gochain-local-decentralize
 [submodule "goloop"]
 	path = goloop
-	url = git@github.com:icon-project/goloop.git
+	url = https://github.com/icon-project/goloop.git
 [submodule "bsc-docker"]
 	path = bsc-docker
 	url = https://github.com/bnb-chain/bsc-docker.git
 [submodule "icon-bridge"]
 	path = icon-bridge
-	url = git@github.com:icon-project/icon-bridge.git
+	url = https://github.com/icon-project/icon-bridge.git

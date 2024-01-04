@@ -1,0 +1,11 @@
+version: '3'
+services:
+  bsc-node:
+    image: bsc-node:latest  # Use the tag you specified in the build command
+    ports:
+      - "8545:8545"
+      - "8546:8546"
+    environment:
+      - KEYSTORE_PASS=Perlia0
+    # Add other configuration options or volumes if needed
+

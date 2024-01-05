@@ -9,6 +9,7 @@ Make sure you have the following installed in your server before running the Mak
 * Go
 * Git
 * GNU Make
+* GCC (on linux can simply run `sudo apt build-essential` which will also install Make)
 
 For setting up the devnet on a new server follow this instructions:
 

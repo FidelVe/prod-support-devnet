@@ -8,7 +8,7 @@ setup:
 	@echo "> Setup archway node.."
 	@cd ./archway/ && make install
 	@echo "> Setup BSC node.."
-	@cp ./misc/docker-compose.yml-icon-bridge ./icon-bridge/devnet/docker-compose.yml
+	@cp ./misc/docker-compose.yml-icon-bridge ./icon-bridge/devnet/docker-compose.yml && docker build --tag bsc-node ./icon-bridge/devnet/bsc-node --build-arg KEYSTORE_PASS=Perlia0
 	# @cd ./bsc-docker && docker compose -f docker-compose.bsc.yml build && docker compose -f docker-compose.simple.bootstrap.yml build && docker compose -f docker-compose.simple.yml build --build-arg OS_ARCH=${UNAME}
 	# @cd ./bsc-docker && docker compose -f docker-compose.simple.bootstrap.yml run bootstrap-simple
 

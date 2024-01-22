@@ -1,9 +1,6 @@
 [submodule "archway"]
 	path = archway
 	url = https://github.com/archway-network/archway/
-[submodule "gochain-local"]
-	path = gochain-local
-	url = https://github.com/icon-project/gochain-local
 [submodule "gochain-local-decentralize"]
 	path = gochain-local-decentralize
 	url = https://github.com/icon-community/gochain-local-decentralize
@@ -13,3 +10,6 @@
 [submodule "icon-bridge"]
 	path = icon-bridge
 	url = https://github.com/icon-project/icon-bridge.git
+[submodule "gochain-btp"]
+	path = gochain-btp
+	url = https://github.com/izyak/gochain-btp.git
